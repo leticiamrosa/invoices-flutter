@@ -70,34 +70,37 @@ class PaymentMethods extends StatelessWidget {
         Column(
           children: [
             Padding(
-              padding: spacingDefault,
-              child: SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                    child: const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        'Copiar código de barras do boleto',
-                        textDirection: TextDirection.ltr,
-                      ),
-                    ),
-                    onPressed: () => openDialog(context)),
-              ),
-            ),
+                padding: spacingDefault,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: OutlinedButton(
+                        child: const Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Text(
+                            'Copiar código de barras do boleto',
+                            textDirection: TextDirection.ltr,
+                          ),
+                        ),
+                        onPressed: () => openDialog(context)),
+                  ),
+                )),
             Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
               child: SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                    child: const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        'Enviar boleto por e-mail',
-                        textDirection: TextDirection.ltr,
-                      ),
-                    ),
-                    onPressed: () => openDialog(context)),
-              ),
+                  width: double.infinity,
+                  child: Directionality(
+                      textDirection: TextDirection.ltr,
+                      child: OutlinedButton(
+                          child: const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text(
+                              'Enviar boleto por e-mail',
+                              textDirection: TextDirection.ltr,
+                            ),
+                          ),
+                          onPressed: () => openDialog(context)))),
             )
           ],
         ),
@@ -116,17 +119,19 @@ class PaymentMethods extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
           child: SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    'Pagar com cartão de crédito',
-                    textDirection: TextDirection.ltr,
-                  ),
-                ),
-                onPressed: () => openDialog(context)),
-          ),
+              width: double.infinity,
+              child: Directionality(
+                textDirection: TextDirection.ltr,
+                child: OutlinedButton(
+                    child: const Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        'Pagar com cartão de crédito',
+                        textDirection: TextDirection.ltr,
+                      ),
+                    ),
+                    onPressed: () => openDialog(context)),
+              )),
         )
       ],
     );
