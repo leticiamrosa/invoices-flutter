@@ -28,7 +28,7 @@ class InvoiceInfo extends StatelessWidget {
                   textDirection: TextDirection.ltr,
                   children: const [
                     Text(
-                      'R 3.024,50',
+                      'R\$ 3.024,50',
                       textDirection: TextDirection.ltr,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -36,11 +36,12 @@ class InvoiceInfo extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: const [
+                  children: [
                     Text(
                       'Vencimento 08/07/2019',
                       textDirection: TextDirection.ltr,
-                      style: TextStyle(fontSize: 16),
+                      style:
+                          TextStyle(fontSize: 16, color: Colors.grey.shade600),
                     ),
                   ],
                 )

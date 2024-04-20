@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:invoices/src/features/payments/presentation/widgets/invoice_info.dart';
+import 'package:invoices/src/features/payments/presentation/widgets/payment_methods.dart';
 
 class PaymentCardContent extends StatelessWidget {
   const PaymentCardContent({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class PaymentCardContent extends StatelessWidget {
             child: Card(
                 elevation: 16,
                 child: Column(
-                  children: const [InvoiceInfo()],
+                  children: const [InvoiceInfo(), PaymentMethods()],
                 ))));
   }
 }
