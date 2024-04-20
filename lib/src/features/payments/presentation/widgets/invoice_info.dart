@@ -5,13 +5,14 @@ class InvoiceInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(textDirection: TextDirection.ltr, children: [
       Padding(
           padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
           child: Row(
+            textDirection: TextDirection.ltr,
             children: const [
               Text(
-                'Ultima fatura',
+                'Última fatura',
                 textDirection: TextDirection.ltr,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               )
@@ -20,8 +21,10 @@ class InvoiceInfo extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 4.0),
         child: Row(
+          textDirection: TextDirection.ltr,
           children: [
             Column(
+              textDirection: TextDirection.ltr,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
@@ -36,6 +39,7 @@ class InvoiceInfo extends StatelessWidget {
                   ],
                 ),
                 Row(
+                  textDirection: TextDirection.ltr,
                   children: [
                     Text(
                       'Vencimento 08/07/2019',
@@ -49,6 +53,7 @@ class InvoiceInfo extends StatelessWidget {
             ),
             Expanded(
                 child: Column(
+              textDirection: TextDirection.ltr,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: const [
@@ -63,12 +68,14 @@ class InvoiceInfo extends StatelessWidget {
         ),
       ),
       const Padding(
-        padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 4.0),
-        child: Divider(
-          height: 2,
-          color: Colors.black,
-        ),
-      )
+          padding: EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 4.0),
+          child: Directionality(
+            textDirection: TextDirection.ltr,
+            child: Divider(
+              height: 2,
+              color: Colors.black,
+            ),
+          ))
     ]);
   }
 }
